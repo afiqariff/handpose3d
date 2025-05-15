@@ -135,8 +135,8 @@ def run_mp(input_stream1, input_stream2, P0, P1):
 
 if __name__ == '__main__':
 
-    input_stream1 = 'media/cam0_test.mp4'
-    input_stream2 = 'media/cam1_test.mp4'
+    input_stream1 = 1
+    input_stream2 = 2
 
     if len(sys.argv) == 3:
         input_stream1 = int(sys.argv[1])
@@ -149,6 +149,6 @@ if __name__ == '__main__':
     kpts_cam0, kpts_cam1, kpts_3d = run_mp(input_stream1, input_stream2, P0, P1)
 
     #this will create keypoints file in current working folder
-    #write_keypoints_to_disk('kpts_cam0.dat', kpts_cam0)
-    #write_keypoints_to_disk('kpts_cam1.dat', kpts_cam1)
-    #write_keypoints_to_disk('kpts_3d.dat', kpts_3d)
+    write_keypoints_to_disk('kpts_cam0.dat', kpts_cam0)
+    write_keypoints_to_disk('kpts_cam1.dat', kpts_cam1)
+    write_keypoints_to_disk('kpts_3d.dat', kpts_3d)
